@@ -1,0 +1,32 @@
+body {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui; 
+    
+    background-image:url('yu.jpg'); 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-size:100% 100%;
+
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 650px) {
+    body {
+      display: block;
+      font-size: 80%;
+    }
+    p {
+      position: relative;
+      margin: -3rem 0 2rem 1rem;
+      padding: 1rem;
+      background: rgba(white, 0.8);
+    } 
+  }
