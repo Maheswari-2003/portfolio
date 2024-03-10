@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="PART.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background-color: #f0f0f0;
+        }
 
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
-        <link rel="stylesheet" href="css/PART.css">
-      
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 10px;
+            padding: 20px;
+        }
 
-        <title>MY ACHIEVEMENTS</title>
-    </head>
-    <body>  
-      <div class="image-grid">
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Styling for specific grid items */
+        .image-grid .image-grid-col-2 {
+            grid-column: span 2;
+        }
+
+        .image-grid .image-grid-row-2 {
+            grid-row: span 2;
+        }
+    </style>
+    <title>MY ACHIEVEMENTS</title>
+</head>
+<body>  
+    <div class="image-grid">
         <img class="image-grid-col-2 image-grid-row-2" src="v7.jpg" alt="architecture">
         <img src="v1.jpg" alt="architecture">
         <img src="v2.jpg" alt="architecture">
         <img src="v5.jpg" alt="architecture">
         <img src="v3.jpg" alt="architecture">
-      </div>
-    </body> 
-    </html>
+    </div>
+</body> 
+</html>
