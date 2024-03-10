@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Grid</title>
+    <link rel="stylesheet" href="i.css">
+    <style>
+        /* Define styles for the background gradient */
+        body {
+            background: linear-gradient(to bottom, #ff6ec7, #7873f5);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        /* Define styles for the container */
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Define styles for the image container */
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Define styles for each image */
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* Define styles for the paragraph */
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <div>
+            <img src="u1.jpg" alt="Photo 1">
+            <p>
+                How do you define photography? The word Photography literally means 'drawing with light', which derives from the Greek photo, meaning light and graph, meaning to draw. Photography is the process of recording an image – a photograph – on light-sensitive film or, in the case of digital photography, via a digital electronic or magnetic memory.
+            </p>
+        </div>
+        <div>
+            <img src="u2.jpg" alt="Photo 2">
+            <p>
+                Photography is not just about capturing images; it's about capturing moments, emotions, and stories. It allows us to freeze a moment in time and preserve it forever. Through photography, we can express our creativity, share our perspective, and connect with others on a deeper level.
+            </p>
+        </div>
+        <div>
+            <img src="u4.jpg" alt="Photo 3">
+            <p>
+                Whether you're a professional photographer or just someone who loves taking snapshots with your smartphone, photography has the power to inspire, evoke emotions, and change perceptions. It's a universal language that transcends barriers and brings people together.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
