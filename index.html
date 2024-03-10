@@ -1,4 +1,5 @@
-<!DOCTYPE html> 
+
+       <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
@@ -17,34 +18,26 @@
             r.src = u;
             a.appendChild(r);
         })(window, document, 'https://app.productfruits.com/static/script.js');
+        
         // Function to initialize Product Fruits content
-        function initProductFruits(username) {
-            // Call the initialization function for Product Fruits with the required parameters
-            $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en', { username: username }]);
+        function initProductFruits() {
+            // Call the initialization function for Product Fruits
+            $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en']);
         }
 
         // Call the initProductFruits function after the page is loaded
         window.addEventListener("load", function() {
             // Check if the Product Fruits content has been displayed before
             const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
-            if (!productFruitsDisplayed) {
-                // Display Product Fruits content
-                const username = localStorage.getItem("username");
-                initProductFruits(username);
+            if (!productFruitsDisplayed && window.location.pathname === 'index.html') {
+                // Display Product Fruits content only on the first page
+                initProductFruits();
                 // Set flag to indicate that the content has been displayed
                 localStorage.setItem("productFruitsDisplayed", true);
             }
         });
     </script>
 </head> 
-<style> 
-    body { 
-        background-image: url('srn.jpg'); 
-        background-repeat: no-repeat; 
-        background-attachment: fixed; 
-        background-size: 100% 100%;
-    }
-</style>
 <body> 
     <div class="hero">
         <nav class="navbar"> 
@@ -98,6 +91,9 @@
             </div>
         </div> 
         <div id="product-fruits-content"></div>
+
+        <!-- Back button to navigate back to the previous page -->
+        <a href="javascript:history.go(-1)">Back</a>
     </div>
 </body> 
 </html>
