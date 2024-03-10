@@ -1,5 +1,4 @@
-
-       <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
@@ -29,7 +28,7 @@
         window.addEventListener("load", function() {
             // Check if the Product Fruits content has been displayed before
             const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
-            if (!productFruitsDisplayed && window.location.pathname === 'index.html') {
+            if (!productFruitsDisplayed && window.location.pathname === '/portfolio-main/web/') {
                 // Display Product Fruits content only on the first page
                 initProductFruits();
                 // Set flag to indicate that the content has been displayed
@@ -93,7 +92,7 @@
         <div id="product-fruits-content"></div>
 
         <!-- Back button to navigate back to the previous page -->
-        <a href="javascript:history.go(-1)">Back</a>
+        <button onclick="history.go(-1)">Back</button>
     </div>
 </body> 
 </html>
