@@ -1,150 +1,204 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/st.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="css/st.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .resume-main {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-box {
+            width: 40%;
+            padding-right: 20px;
+        }
+
+        .right-box {
+            width: 55%;
+            padding-left: 20px;
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .content-box {
+            margin-top: 20px;
+        }
+
+        .content-box h2 {
+            color: #333;
+        }
+
+        .hr1 {
+            border-top: 2px solid #333;
+            margin: 10px 0;
+        }
+
+        .p1 {
+            color: #666;
+        }
+
+        .p2 {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .circle {
+            color: green;
+            margin-right: 5px;
+        }
+
+        .circle1 {
+            color: #ccc;
+            margin-right: 5px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .heading {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .hr2 {
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        .p5 {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .span1 {
+            color: #666;
+        }
+
+        .col-div-4 {
+            width: 30%;
+            float: left;
+        }
+
+        .col-div-8 {
+            width: 65%;
+            float: right;
+        }
+
+        .col-div-3 {
+            width: 20%;
+            float: left;
+        }
+
+        .col3 {
+            margin-top: 20px;
+        }
+
+        .in {
+            color: green;
+            margin-right: 5px;
+        }
+
+        .inp {
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
 <div class="resume-main">
-	<div class="left-box">
-		<br><br>
-		<div class="profile">
-			<img src="css/pica.jpg">
-		</div>
-		<div class="content-box">
-		<h2>Profile Info</h2>
-		<hr class="hr1">
-		<p class="p1">An aspiring web designer and i want to expose my skills in a reputated environment </p>
+    <div class="left-box">
+        <br><br>
+        <div class="profile">
+            <img src="css/pica.jpg">
+        </div>
+        <div class="content-box">
+            <h2>Profile Info</h2>
+            <hr class="hr1">
+            <p class="p1">An aspiring web designer and i want to expose my skills in a reputated environment </p>
 
-		<h3>Language:</h3>
-		<p class="p2">Tamil</p>
-		<div id="progress"></div>
-		<p class="p2">English</p>
-		<div id="progress1"></div>
+            <h3>Language:</h3>
+            <p class="p2">Tamil</p>
+            <div id="progress"></div>
+            <p class="p2">English</p>
+            <div id="progress1"></div>
 
-		<br><br>
-		<h2>My Skills</h2>
-		<hr class="hr1">
-		<br>
-		<div class="col-div-6"><p class="p2">HTML</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-			<div class="clearfix"></div>
-		<div class="col-div-6"><p class="p2">CSS</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-			<div class="clearfix"></div>
-		<div class="col-div-6"><p class="p2">C</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-			<div class="clearfix"></div>
-		<div class="col-div-6"><p class="p2">PYTHON</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
+            <br><br>
+            <h2>My Skills</h2>
+            <hr class="hr1">
+            <br>
+            <div class="col-div-6"><p class="p2">HTML</p></div>
+            <div class="col-div-6">
+                <i class="fa fa-circle circle"></i>
+                <i class="fa fa-circle circle"></i>
+                <i class="fa fa-circle circle"></i>
+                <i class="fa fa-circle circle1"></i>
+                <i class="fa fa-circle circle1"></i>
+            </div>
+            <div class="clearfix"></div>
+            <!-- Add more skills here -->
+        </div>
+    </div>
 
-			<div class="clearfix"></div>
-			<br>
-			<h2>interests</h2>
-			<hr class="hr1">
-			<br>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Designing</span>
-			</div>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Music</span>
-			</div>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Sports</span>
-			</div>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Photography</span>
-			</div>
-		</div>
-	</div>
+    <div class="right-box">
+        <h1>
+            Maheswari<br>
+            <span>Kumar</span>
+        </h1>
+        <p class="p3">WEB DESIGNER</p>
 
-	<div class="right-box">
-		<h1>
-			Maheswari<br>
-			<span>Kumar</span>
-		</h1>
-		<p class="p3">WEB DESIGNER</p>
+        <br>    
+        <h2 class="heading">ONLINE COURSES</h2>
+        <hr class="hr2">
+        <br>
+        <div class="col-div-4">
+            <p class="p5">OCTOBER 2022</p>
+            <span class="span1">NPTEL</span>
+        </div>
+        <div class="col-div-8">
+            <p class="p5">CLOUD COMPUTING</p>
+            <span class="span1">Cloud computing course just tells us about the basics and fundamentals of cloud.</span>
+        </div>
+        <div class="clearfix"></div>
+        <!-- Add more courses here -->
 
-		<br>	
-		<h2 class="heading">ONLINE COURSES</h2>
-		<hr class="hr2">
-		<br>
-		<div class="col-div-4">
-			<p class="p5">OCTOBER 2022</p>
-			<span class="span1">NPTEL</span>
-		</div>
-		<div class="col-div-8">
-			<p class="p5">CLOUD COMPUTING</p>
-			<span class="span1">Cloud computing course just tells us about the basics and fundamentals of cloud.</span>
-		</div>
-		<div class="clearfix"></div>
-		<br>
-		<div class="col-div-4">
-			<p class="p5">JUNE 2022</p>
-			<span class="span1">SPOKEN TUTORIAL IIT BOMBAY</span>
-		</div>
-		<div class="col-div-8">
-			<p class="p5">PYTHON 1.4.3</p>
-			<span class="span1">It gives us the basic knowledge about python.</span>
-		</div>
-		<div class="clearfix"></div>
-		<br>
-		<div class="col-div-4">
-			<p class="p5">MARCH 2022</p>
-			<span class="span1">SOLOLEARN</span>
-		</div>
-		<div class="col-div-8">
-			<p class="p5">R PROGRAMMING</p>
-			<span class="span1">R deals with many clustering algorithms.</span>
-		</div>
-		<div class="clearfix"></div>
-
-		<br>	
-		<h2 class="heading">My Education</h2>
-		<hr class="hr2">
-		<br>
-		<div class="col-div-4">
-			<p class="p5">2017-2018</p>
-			<span class="span1">Sri jayendra golden jublee school</span>
-		</div>
-		<div class="col-div-8">
-			<p class="p5">SSLC</p>
-			<span class="span1">Completed SSLC with 95.4%.</span>
-		</div>
-		<div class="clearfix"></div>
-		<br>
+        <br>    
+        <h2 class="heading">My Education</h2>
+        <hr class="hr2">
+        <br>
+        <div class="col-div-4">
+            <p class="p5">2017-2018</p>
+            <span class="span1">Sri jayendra golden jublee school</span>
+        </div>
+        <div class="col-div-8">
+            <p class="p5">SSLC</p>
+            <span class="span1">Completed SSLC with 95.4%.</span>
+        </div>
+        <div class="clearfix"></div>
+        <!-- Add more education details here --> 
+	    <br>
 		<div class="col-div-4">
 			<p class="p5">2019-2020</p>
 			<span class="span1">Sri jayendra golden jublee school></span>
@@ -157,6 +211,12 @@
 	</div>
 	<div class="clearfix"></div>
 
+</div>
+
+</body>
+</html>
+    </div>
+    <div class="clearfix"></div>
 </div>
 
 </body>
