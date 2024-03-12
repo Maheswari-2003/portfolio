@@ -61,27 +61,31 @@
    /* Add this CSS to your existing styles.css file */
 
 /* Welcome message */
-.content h2 {
-    color: #fff; /* Change to white color */
-    border-bottom: 1px solid #fff; /* Change border color to white */
-    padding-bottom: 10px; /* Add padding for spacing */
-    margin-bottom: 20px; /* Add margin for spacing */
+.content {
+    display: none;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
 }
 
-/* Display Users button */
-.content button {
-    background-color: #fff; /* Change button background color to white */
-    color: #007bff; /* Change button text color to blue */
-    border: 1px solid #007bff; /* Change button border color to blue */
-    padding: 5px 10px; /* Add padding for button size */
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
-.content button:hover {
-    background-color: #007bff; /* Change button background color on hover to blue */
-    color: #fff; /* Change button text color on hover to white */
+.button:hover {
+    background-color: #0056b3;
 }
+
 
 </style>
 <body> 
@@ -109,7 +113,17 @@
             <!-- Your portfolio content goes here -->
             <p>This is my portfolio where I showcase my skills and projects.</p>
             <button onclick="showUsers()">Display Users</button>
-        </div>
+        </div> 
+       <script>
+       function showUsers() {
+    const username = sessionStorage.getItem("username");
+    if (username) {
+        document.getElementById("portfolio-content").innerHTML = `<h2>Welcome, ${username}!</h2>`;
+    } else {
+        document.getElementById("portfolio-content").innerHTML = "<p>No user logged in.</p>";
+    }
+}
+       </script>
         <div class="images"> 
             <img src="pica.jpg" class="trr">
         </div> 
