@@ -26,7 +26,6 @@
         }
 
         .login-container {
-            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -71,12 +70,12 @@
         }
 
         .content p {
-            color: black; /* Text color changed to black for better visibility */
+            color: black; 
         }
 
         .buttons a {
             text-decoration: none;
-            color: white; /* Link color changed to white */
+            color: white;
         }
 
         .buttons button {
@@ -173,16 +172,15 @@
     </div>
 
    
-        <script>
-        // Function to handle form submission
+  <script>
         document.getElementById("login-form").addEventListener("submit", function(event) {
             event.preventDefault();
 
             const enteredUsername = document.getElementById("username").value;
             const enteredPassword = document.getElementById("password").value;
 
-            // Check if entered credentials are valid
-            if (enteredUsername.trim() === "Maheswari" && enteredPassword.trim() === "mahi") {
+            // Check if entered credentials are valid (you can add your own validation logic here)
+            if (enteredUsername.trim() && enteredPassword.trim()) {
                 // Hide login container and show portfolio content
                 document.getElementById("login-container").style.display = "none";
                 document.getElementById("portfolio-content").style.display = "block";
@@ -195,7 +193,6 @@
             }
         });
 
-        // Function to display users
         function showUsers() {
             const username = sessionStorage.getItem("username");
             if (username) {
@@ -203,29 +200,25 @@
             }
         }
 
-        // Function to initialize Product Fruits content
         function initProductFruits(username) {
-            // Call the initialization function for Product Fruits with the required parameters
             $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en', { username: username }]);
         }
 
-        // Call the initProductFruits function after the page is loaded
         window.addEventListener("load", function() {
-            // Check if the Product Fruits content has been displayed before
             const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
             if (!productFruitsDisplayed) {
                 const username = sessionStorage.getItem("username");
                 if (username) {
-                    // Initialize Product Fruits content if the user is logged in
                     initProductFruits(username);
-                    // Set flag to indicate that the content has been displayed
                     localStorage.setItem("productFruitsDisplayed", true);
                 }
             }
         });
     </script>
+
+    
     <script>
-        // Product Fruits script
+      
         (function(w,d,u){
             w.$productFruits = w.$productFruits || [];
             w.productFruits = w.productFruits || {};
