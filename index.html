@@ -1,6 +1,5 @@
 
-   
- <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
@@ -38,16 +37,12 @@
             }
         });
 
-        // Function to handle form submission
-        function handleLogin(event) {
-            event.preventDefault();
-            const username = document.getElementById("username").value;
-            // For simplicity, let's assume the password is correct
-            localStorage.setItem("username", username);
-            document.getElementById("login-container").style.display = "none";
-            document.getElementById("portfolio-content").style.display = "block";
-            initProductFruits(username);
-            localStorage.setItem("productFruitsDisplayed", true);
+        // Function to display users (for demonstration)
+        function showUsers() {
+            // Get username from session storage
+            const username = sessionStorage.getItem("username");
+            // Display the username
+            document.getElementById("portfolio-content").innerHTML = `<h2>Welcome to My Portfolio</h2><p>Username: ${username}</p>`;
         }
     </script>
 </head> 
@@ -57,36 +52,56 @@
         background-repeat: no-repeat; 
         background-attachment: fixed; 
         background-size: 100% 100%;
-    } 
-   /* Add this CSS to your existing styles.css file */
-
-/* Welcome message */
-.content {
-    display: none;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin: 20px auto;
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-
+        color: white; /* Set text color to white */
+    }
+    .login-container,
+    .content {
+        background-color: rgba(255, 255, 255, 0.8); /* Set background color to semi-transparent white */
+        color: black; /* Set text color to black */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        margin: 20px auto;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .login-container button:hover {
+        background-color: #0056b3;
+    }
+    .buttons .row button,
+    .buttons .row a {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+    }
+    .buttons .row button:hover,
+    .buttons .row a:hover {
+        background-color: #0056b3;
+    }
 </style>
 <body> 
     <div class="hero">
@@ -100,30 +115,20 @@
                 <li><a href="#">CONTACT ME</a></li>
             </ul> 
         </nav> 
-        <div id="login-container" class="login-container">
+        <div class="login-container" id="login-container">
             <h2>Login</h2>
-            <form id="login-form" onsubmit="handleLogin(event)">
+            <form id="login-form">
                 <input type="text" id="username" name="username" placeholder="Username" required><br>
                 <input type="password" id="password" name="password" placeholder="Password" required><br>
                 <button type="submit">Login</button>
             </form>
         </div>
-        <div id="portfolio-content" class="content" style="display: none;">
+        <div class="content" id="portfolio-content">
             <h2>Welcome to My Portfolio</h2>
             <!-- Your portfolio content goes here -->
             <p>This is my portfolio where I showcase my skills and projects.</p>
             <button onclick="showUsers()">Display Users</button>
-        </div> 
-       <script>
-       function showUsers() {
-    const username = sessionStorage.getItem("username");
-    if (username) {
-        document.getElementById("portfolio-content").innerHTML = `<h2>Welcome, ${username}!</h2>`;
-    } else {
-        document.getElementById("portfolio-content").innerHTML = "<p>No user logged in.</p>";
-    }
-}
-       </script>
+        </div>
         <div class="images"> 
             <img src="pica.jpg" class="trr">
         </div> 
