@@ -1,90 +1,28 @@
-<!DOCTYPE html> 
+
+   
+ <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Personal portfolio website</title>
-    <style> 
-        /* CSS styles here */
-        body { 
-            background-image: url('srn.jpg'); 
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
-            background-size: 100% 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: white;
-        }
-
-        .login-form {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        .form-group button {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="styles.css">  
     <script> 
+        (function(w,d,u){
+            w.$productFruits = w.$productFruits || [];
+            w.productFruits = w.productFruits || {};
+            w.productFruits.scrV = '2';
+            let a = d.getElementsByTagName('head')[0];
+            let r = d.createElement('script');
+            r.async = 1;
+            r.src = u;
+            a.appendChild(r);
+        })(window, document, 'https://app.productfruits.com/static/script.js');
         // Function to initialize Product Fruits content
         function initProductFruits(username) {
             // Call the initialization function for Product Fruits with the required parameters
             $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en', { username: username }]);
-        }
-
-        // Function to handle login
-        function login() {
-            // Get username and password from the form
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            
-            // Simple validation
-            if (username && password) {
-                // Store username in session
-                sessionStorage.setItem("username", username);
-                // Reload the page to display Product Fruits content
-                location.reload();
-            } else {
-                alert("Please enter both username and password.");
-            }
         }
 
         // Call the initProductFruits function after the page is loaded
@@ -93,32 +31,94 @@
             const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
             if (!productFruitsDisplayed) {
                 // Display Product Fruits content
-                const username = sessionStorage.getItem("username");
-                if (username) {
-                    initProductFruits(username);
-                    // Set flag to indicate that the content has been displayed
-                    localStorage.setItem("productFruitsDisplayed", true);
-                }
+                const username = localStorage.getItem("username");
+                initProductFruits(username);
+                // Set flag to indicate that the content has been displayed
+                localStorage.setItem("productFruitsDisplayed", true);
             }
         });
+
+        // Function to handle form submission
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            // For simplicity, let's assume the password is correct
+            localStorage.setItem("username", username);
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("portfolio-content").style.display = "block";
+            initProductFruits(username);
+            localStorage.setItem("productFruitsDisplayed", true);
+        }
     </script>
 </head> 
+<style> 
+    body { 
+        background-image: url('srn.jpg'); 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+        background-size: 100% 100%;
+    }
+</style>
 <body> 
     <div class="hero">
-        <div class="login-form">
+        <nav class="navbar"> 
+            <img src="nb.png" class="logo">
+            <ul> 
+                <li><a href="interest.html">INTEREST</a></li> 
+                <li><a href="about.html">ABOUT ME</a></li> 
+                <li><a href="project.html">PROJECT</a></li>
+                <li><a href="parti.html">ACHIEVEMENTS</a></li> 
+                <li><a href="#">CONTACT ME</a></li>
+            </ul> 
+        </nav> 
+        <div id="login-container" class="login-container">
             <h2>Login</h2>
-            <form>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="button" onclick="login()">Login</button>
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
             </form>
         </div>
+        <div id="portfolio-content" class="content" style="display: none;">
+            <h2>Welcome to My Portfolio</h2>
+            <!-- Your portfolio content goes here -->
+            <p>This is my portfolio where I showcase my skills and projects.</p>
+            <button onclick="showUsers()">Display Users</button>
+        </div>
+        <div class="images"> 
+            <img src="pica.jpg" class="trr">
+        </div> 
+        <div class="buttons">
+            <div class="row"> 
+                <a href="https://m.facebook.com/story.php?story_fbid=pfbid0gfPbLNCZqXgcmfodNyrc8UDozHTDVYaeH8u8QPvHy3D2bQRmh1LBfbMUY2qct5K2l&id=100072165052437&mibextid=Nif5oz ">
+                    <button class="facebook"> 
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        Facebook
+                    </button>
+                </a>
+                <button class="instagram"> 
+                    <a href="https://instagram.com/black_loverrx?igshid=ZDdkNTZiNTM=">
+                        <span><i class="fab fa-instagram"></i></span>
+                        Instagram
+                    </a>
+                </button>
+            </div>
+            <div class="row"> 
+                <a href="www.twitter.com">
+                    <button class="twitter">
+                        <span><i class="fab fa-twitter"></i></span>
+                        Twitter
+                    </button>
+                </a>
+                <button class="youtube"> 
+                    <a href="www.youtube.com">
+                        <span><i class="fab fa-youtube"></i></span>
+                        YouTube
+                    </a>
+                </button>
+            </div>
+        </div> 
+        <div id="product-fruits-content"></div>
     </div>
 </body> 
 </html>
