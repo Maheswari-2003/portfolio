@@ -1,120 +1,77 @@
 
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio website</title>
-    <link rel="stylesheet" href="styles.css">  
-    <script> 
-        (function(w,d,u){
-            w.$productFruits = w.$productFruits || [];
-            w.productFruits = w.productFruits || {};
-            w.productFruits.scrV = '2';
-            let a = d.getElementsByTagName('head')[0];
-            let r = d.createElement('script');
-            r.async = 1;
-            r.src = u;
-            a.appendChild(r);
-        })(window, document, 'https://app.productfruits.com/static/script.js');
-        // Function to initialize Product Fruits content
-        function initProductFruits(username) {
-            // Call the initialization function for Product Fruits with the required parameters
-            $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en', { username: username }]);
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url('srn.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        // Call the initProductFruits function after the page is loaded
-        window.addEventListener("load", function() {
-            // Check if the Product Fruits content has been displayed before
-            const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
-            if (!productFruitsDisplayed) {
-                // Display Product Fruits content
-                const username = localStorage.getItem("username");
-                initProductFruits(username);
-                // Set flag to indicate that the content has been displayed
-                localStorage.setItem("productFruitsDisplayed", true);
-            }
-        });
-
-        // Function to display users (for demonstration)
-        function showUsers() {
-            // Get username from session storage
-            const username = sessionStorage.getItem("username");
-            // Display the username
-            document.getElementById("portfolio-content").innerHTML = `<h2>Welcome to My Portfolio</h2><p>Username: ${username}</p>`;
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
         }
-    </script>
-</head> 
-<style> 
-    body { 
-        background-image: url('srn.jpg'); 
-        background-repeat: no-repeat; 
-        background-attachment: fixed; 
-        background-size: 100% 100%;
-        color: white; /* Set text color to white */
-    }
-    .login-container,
-    .content {
-        background-color: rgba(255, 255, 255, 0.8); /* Set background color to semi-transparent white */
-        color: black; /* Set text color to black */
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 80%;
-        margin: 20px auto;
-    }
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-        width: calc(100% - 22px);
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
-    .login-container button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    .login-container button:hover {
-        background-color: #0056b3;
-    }
-    .buttons .row button,
-    .buttons .row a {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 10px;
-        margin-right: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        text-decoration: none;
-    }
-    .buttons .row button:hover,
-    .buttons .row a:hover {
-        background-color: #0056b3;
-    }
-</style>
-<body> 
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+            color: #000; /* Text color changed to black for better visibility */
+        }
+    </style>
+</head>
+<body>
     <div class="hero">
-        <nav class="navbar"> 
-            <img src="nb.png" class="logo">
-            <ul> 
-                <li><a href="interest.html">INTEREST</a></li> 
-                <li><a href="about.html">ABOUT ME</a></li> 
-                <li><a href="project.html">PROJECT</a></li>
-                <li><a href="parti.html">ACHIEVEMENTS</a></li> 
-                <li><a href="#">CONTACT ME</a></li>
-            </ul> 
-        </nav> 
         <div class="login-container" id="login-container">
             <h2>Login</h2>
             <form id="login-form">
@@ -129,40 +86,35 @@
             <p>This is my portfolio where I showcase my skills and projects.</p>
             <button onclick="showUsers()">Display Users</button>
         </div>
-        <div class="images"> 
-            <img src="pica.jpg" class="trr">
-        </div> 
-        <div class="buttons">
-            <div class="row"> 
-                <a href="https://m.facebook.com/story.php?story_fbid=pfbid0gfPbLNCZqXgcmfodNyrc8UDozHTDVYaeH8u8QPvHy3D2bQRmh1LBfbMUY2qct5K2l&id=100072165052437&mibextid=Nif5oz ">
-                    <button class="facebook"> 
-                        <span><i class="fab fa-facebook-f"></i></span>
-                        Facebook
-                    </button>
-                </a>
-                <button class="instagram"> 
-                    <a href="https://instagram.com/black_loverrx?igshid=ZDdkNTZiNTM=">
-                        <span><i class="fab fa-instagram"></i></span>
-                        Instagram
-                    </a>
-                </button>
-            </div>
-            <div class="row"> 
-                <a href="www.twitter.com">
-                    <button class="twitter">
-                        <span><i class="fab fa-twitter"></i></span>
-                        Twitter
-                    </button>
-                </a>
-                <button class="youtube"> 
-                    <a href="www.youtube.com">
-                        <span><i class="fab fa-youtube"></i></span>
-                        YouTube
-                    </a>
-                </button>
-            </div>
-        </div> 
-        <div id="product-fruits-content"></div>
     </div>
-</body> 
+
+    <script>
+        // Function to handle form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const enteredUsername = document.getElementById("username").value;
+            const enteredPassword = document.getElementById("password").value;
+
+            // Check if entered credentials are valid
+            if (enteredUsername.trim() === "your_username" && enteredPassword.trim() === "your_password") {
+                // Hide login container and show portfolio content
+                document.getElementById("login-container").style.display = "none";
+                document.getElementById("portfolio-content").style.display = "block";
+                // Store username in session storage
+                sessionStorage.setItem("username", enteredUsername);
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+
+        // Function to display users
+        function showUsers() {
+            const username = sessionStorage.getItem("username");
+            if (username) {
+                document.getElementById("portfolio-content").innerHTML += `<p>Logged in as: ${username}</p>`;
+            }
+        }
+    </script>
+</body>
 </html>
