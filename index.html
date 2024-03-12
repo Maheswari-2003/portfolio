@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            color: white; /* Changed text color to white */
         }
 
         .hero {
@@ -25,7 +26,7 @@
         }
 
         .login-container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -61,12 +62,41 @@
         .content {
             display: none;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 80%;
             margin: 20px auto;
-            color: #000; /* Text color changed to black for better visibility */
+            color: black; /* Text color changed to black for better visibility */
+        }
+
+        .content p {
+            color: black; /* Text color changed to black for better visibility */
+        }
+
+        .buttons a {
+            text-decoration: none;
+            color: white; /* Link color changed to white */
+        }
+
+        .buttons button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 16px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .buttons button span {
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -86,6 +116,258 @@
             <p>This is my portfolio where I showcase my skills and projects.</p>
             <button onclick="showUsers()">Display Users</button>
         </div>
+        <nav class="navbar"> 
+            <img src="nb.png" class="logo">
+            <ul> 
+                <li><a href="interest.html">INTEREST</a></li> 
+                <li><a href="about.html">ABOUT ME</a></li> 
+                <li><a href="project.html">PROJECT</a></li>
+                <li><a href="parti.html">ACHIEVEMENTS</a></li> 
+                <li><a href="#">CONTACT ME</a></li>
+            </ul> 
+        </nav> 
+        <div class="detel"> 
+            <h1>Hi, Myself Maheswari <span>Kumar</span></h1> 
+            <p style="font-size:22px;">This is my official portfolio website to showcase my skills.<br> 
+                I have attached my resume for further details about project ideas<br> 
+                and my achievements.</p>
+            <a target="_blank" class="fcc-btn" href="res.html">RESUME</a>
+        </div> 
+        <div class="images"> 
+            <img src="pica.jpg" class="trr">
+        </div> 
+        <div class="buttons">
+            <div class="row"> 
+                <a href="https://m.facebook.com/story.php?story_fbid=pfbid0gfPbLNCZqXgcmfodNyrc8UDozHTDVYaeH8u8QPvHy3D2bQRmh1LBfbMUY2qct5K2l&id=100072165052437&mibextid=Nif5oz ">
+                    <button class="facebook"> 
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        Facebook
+                    </button>
+                </a>
+                <button class="instagram"> 
+                    <a href="https://instagram.com/black_loverrx?igshid=ZDdkNTZiNTM=">
+                        <span><i class="fab fa-instagram"></i></span>
+                        Instagram
+                    </a>
+                </button>
+            </div>
+            <div class="row"> 
+                <a href="www.twitter.com">
+                    <button class="twitter">
+                        <span><i class="fab fa-twitter"></i></span>
+                        Twitter
+                    </button>
+                </a>
+                <button class="youtube"> 
+                    <a href="www.youtube.com">
+                        <span><i class="fab fa-youtube"></i></span>
+                        YouTube
+                    </a>
+                </button>
+            </div>
+        </div> 
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url('srn.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white; /* Changed text color to white */
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+            color: black; /* Text color changed to black for better visibility */
+        }
+
+        .content p {
+            color: black; /* Text color changed to black for better visibility */
+        }
+
+        .buttons a {
+            text-decoration: none;
+            color: white; /* Link color changed to white */
+        }
+
+        .buttons button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 16px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .buttons button span {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="login-container" id="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="content" id="portfolio-content">
+            <h2>Welcome to My Portfolio</h2>
+            <!-- Your portfolio content goes here -->
+            <p>This is my portfolio where I showcase my skills and projects.</p>
+            <button onclick="showUsers()">Display Users</button>
+        </div>
+        <nav class="navbar"> 
+            <img src="nb.png" class="logo">
+            <ul> 
+                <li><a href="interest.html">INTEREST</a></li> 
+                <li><a href="about.html">ABOUT ME</a></li> 
+                <li><a href="project.html">PROJECT</a></li>
+                <li><a href="parti.html">ACHIEVEMENTS</a></li> 
+                <li><a href="#">CONTACT ME</a></li>
+            </ul> 
+        </nav> 
+        <div class="detel"> 
+            <h1>Hi, Myself Maheswari <span>Kumar</span></h1> 
+            <p style="font-size:22px;">This is my official portfolio website to showcase my skills.<br> 
+                I have attached my resume for further details about project ideas<br> 
+                and my achievements.</p>
+            <a target="_blank" class="fcc-btn" href="res.html">RESUME</a>
+        </div> 
+        <div class="images"> 
+            <img src="pica.jpg" class="trr">
+        </div> 
+        <div class="buttons">
+            <div class="row"> 
+                <a href="https://m.facebook.com/story.php?story_fbid=pfbid0gfPbLNCZqXgcmfodNyrc8UDozHTDVYaeH8u8QPvHy3D2bQRmh1LBfbMUY2qct5K2l&id=100072165052437&mibextid=Nif5oz ">
+                    <button class="facebook"> 
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        Facebook
+                    </button>
+                </a>
+                <button class="instagram"> 
+                    <a href="https://instagram.com/black_loverrx?igshid=ZDdkNTZiNTM=">
+                        <span><i class="fab fa-instagram"></i></span>
+                        Instagram
+                    </a>
+                </button>
+            </div>
+            <div class="row"> 
+                <a href="www.twitter.com">
+                    <button class="twitter">
+                        <span><i class="fab fa-twitter"></i></span>
+                        Twitter
+                    </button>
+                </a>
+                <button class="youtube"> 
+                    <a href="www.youtube.com">
+                        <span><i class="fab fa-youtube"></i></span>
+                        YouTube
+                    </a>
+                </button>
+            </div>
+        </div> 
+        <div id="product-fruits-content"></div>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const enteredUsername = document.getElementById("username").value;
+            const enteredPassword = document.getElementById("password").value;
+
+            // Check if entered credentials are valid
+            if (enteredUsername.trim() === "Maheswari" && enteredPassword.trim() === "mahi") {
+                // Hide login container and show portfolio content
+                document.getElementById("login-container").style.display = "none";
+                document.getElementById("portfolio-content").style.display = "block";
+                // Store username in session storage
+                sessionStorage.setItem("username", enteredUsername);
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+
+        // Function to display users
+        function showUsers() {
+            const username = sessionStorage.getItem("username");
+            if (username) {
+                document.getElementById("portfolio-content").innerHTML += `<p>Logged in as: ${username}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+
+        <div id="product-fruits-content"></div>
     </div>
 
     <script>
