@@ -98,7 +98,37 @@
         .buttons button span {
             margin-right: 5px;
         }
-    </style>
+    </style> 
+    <script> 
+           (function(w,d,u){
+            w.$productFruits = w.$productFruits || [];
+            w.productFruits = w.productFruits || {};
+            w.productFruits.scrV = '2';
+            let a = d.getElementsByTagName('head')[0];
+            let r = d.createElement('script');
+            r.async = 1;
+            r.src = u;
+            a.appendChild(r);
+        })(window, document, 'https://app.productfruits.com/static/script.js');
+     function initProductFruits(username) {
+            // Call the initialization function for Product Fruits with the required parameters
+            $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en', { username: username }]);
+        }
+
+        // Call the initProductFruits function after the page is loaded
+        window.addEventListener("load", function() {
+            // Check if the Product Fruits content has been displayed before
+            const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
+            if (!productFruitsDisplayed) {
+                // Display Product Fruits content
+                const username = sessionStorage.getItem("username");
+                initProductFruits(username);
+                // Set flag to indicate that the content has been displayed
+                localStorage.setItem("productFruitsDisplayed", true);
+            }
+        });
+    </script>
+
 </head>
 <body>
     <div class="hero">
@@ -199,37 +229,9 @@
         }
 
         // Function to initialize Product Fruits content
-        function initProductFruits(username) {
-            // Call the initialization function for Product Fruits with the required parameters
-            $productFruits.push(['init', 'ORWpxDvNM4Z71eVc', 'en', { username: username }]);
-        }
-
-        // Call the initProductFruits function after the page is loaded
-        window.addEventListener("load", function() {
-            // Check if the Product Fruits content has been displayed before
-            const productFruitsDisplayed = localStorage.getItem("productFruitsDisplayed");
-            if (!productFruitsDisplayed) {
-                // Display Product Fruits content
-                const username = sessionStorage.getItem("username");
-                initProductFruits(username);
-                // Set flag to indicate that the content has been displayed
-                localStorage.setItem("productFruitsDisplayed", true);
-            }
-        });
+    
     </script>
-    <script>
-        // Product Fruits script
-        (function(w,d,u){
-            w.$productFruits = w.$productFruits || [];
-            w.productFruits = w.productFruits || {};
-            w.productFruits.scrV = '2';
-            let a = d.getElementsByTagName('head')[0];
-            let r = d.createElement('script');
-            r.async = 1;
-            r.src = u;
-            a.appendChild(r);
-        })(window, document, 'https://app.productfruits.com/static/script.js');
-    </script>
+   
 </body>
 </html>
 
